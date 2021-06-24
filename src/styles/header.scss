@@ -1,0 +1,216 @@
+.main_header {
+  min-height: 110px;
+  padding: 0 45px 0 30px;
+
+  .brand_nav_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px;
+    .brand_title {
+      > img {
+        height: 41px;
+        width: 200px;
+      }
+    }
+
+    .nav_section {
+      display: flex;
+      align-items: center;
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 900;
+          font-size: 18px;
+          margin-left: 23px;
+          position: relative;
+          cursor: pointer;
+          letter-spacing: 0.9px;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: black;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          }
+          &:hover::before {
+            width: 100%;
+            transition: all 400ms ease-in;
+          }
+          > img {
+            width: 22px;
+          }
+        }
+      }
+      .bars {
+        margin-left: 20px;
+        display: none;
+      }
+    }
+  }
+  .sub_menu {
+    margin-bottom: 30px;
+    .commercial {
+      display: none;
+      transition: display ease-in-out 400ms;
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        li {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 900;
+          font-size: 18px;
+          position: relative;
+          cursor: pointer;
+          text-align: right;
+          margin-left: 20px;
+          letter-spacing: 0.9px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: black;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          }
+          &:hover::before {
+            width: 100%;
+            transition: all 400ms ease-in;
+          }
+          > img {
+            width: 22px;
+          }
+        }
+      }
+    }
+
+    .commercial_hidden {
+      display: flex;
+      transition: all ease-in-out 400ms;
+    }
+    .radio {
+      display: none;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        align-items: center;
+        li {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 900;
+          font-size: 18px;
+          margin-left: 23px;
+          position: relative;
+          cursor: pointer;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: black;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          }
+          &:hover::before {
+            width: 100%;
+            transition: all 400ms ease-in;
+          }
+          > img {
+            width: 22px;
+          }
+        }
+      }
+    }
+    .radio_hidden {
+      display: flex;
+      margin-bottom: 20px;
+      transition: all ease-in-out 400ms;
+    }
+  }
+  .user_player_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    .search_sign_in_section {
+      ul {
+        display: flex;
+        > li {
+          font-weight: 300;
+          margin-left: 20px;
+          cursor: pointer;
+          &:hover {
+            color: blue;
+          }
+          > i {
+            color: rgb(114, 112, 112);
+          }
+          input {
+            border: none;
+            outline: none;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    .player_section {
+      ul {
+        display: flex;
+        li {
+          margin-left: 20px;
+          cursor: pointer;
+          i {
+            color: rgb(77, 76, 76);
+            font-size: 13px;
+            &:hover {
+              color: blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1160px) {
+  .main_header {
+    min-height: 60px;
+    padding: 0 10px;
+    .brand_nav_section {
+      .nav_section {
+        ul {
+          li {
+            display: none;
+          }
+          li:nth-child(9) {
+            display: block;
+            display: flex;
+            align-items: center;
+          }
+        }
+        .bars {
+          display: block;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+    }
+    .sub_menu {
+      display: none;
+    }
+    .user_player_section {
+      display: none;
+    }
+  }
+}

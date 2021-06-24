@@ -1,0 +1,126 @@
+.hero {
+  min-height: 471px;
+  width: 100%;
+  background: url("https://connect.monstercat.com/v2/release/706df3e4-0e2d-4a5f-9004-e54419094228/cover?image_width=512");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  padding: 50px 0 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 1)
+    );
+  }
+
+  .primary_content {
+    display: flex;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+
+    > .hero_image {
+      width: 35%;
+      max-width: 35%;
+      height: 100%;
+      justify-self: flex-start;
+      object-fit: contain;
+      img {
+        width: 100%;
+      }
+    }
+    .hero_texts {
+      flex: 1;
+      padding-left: 40px;
+      color: white;
+      text-align: left;
+
+      > div {
+        margin-bottom: 23px;
+      }
+      .song_title {
+        font-size: 1.5em;
+      }
+      .artist_name {
+        font-size: 1.2em;
+        font-weight: 200;
+      }
+      .countdown {
+        opacity: 0.7;
+        font-weight: normal;
+      }
+      .expireTimeBtn {
+        height: 50px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        background: rgb(84, 114, 247);
+        border: none;
+        border-radius: 2px;
+        color: white;
+        &:hover {
+          background: white;
+          transition: all ease-in-out 300ms;
+          a {
+            color: rgb(20, 20, 20);
+          }
+        }
+      }
+      a:hover {
+        color: rgb(108, 141, 250);
+      }
+      .artists {
+        display: flex;
+        .artist_image {
+          height: 90px;
+          width: 90px;
+          margin-right: 20px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1160px) {
+  .hero {
+    .primary_content {
+      min-height: 501px;
+      flex-direction: column;
+      text-align: center;
+      > .hero_image {
+        width: 100%;
+        max-width: 100%;
+
+        justify-self: unset;
+        img {
+          width: 100%;
+          max-height: 500px;
+        }
+      }
+      .hero_texts {
+        text-align: center;
+        font-size: 13px;
+        .artists {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
